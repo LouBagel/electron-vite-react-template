@@ -1,0 +1,57 @@
+{
+  "name": "electron-vite-react-template",
+  "version": "0.0.0",
+  "description": "Electron + Vite + React + TypeScript + Tailwind CSS Template",
+  "main": "build/main/main.js",
+  "scripts": {
+    "dev": "npx cross-env NODE_ENV=development concurrently \"npm:dev:renderer\" \"npm:dev:main\"",
+    "dev:renderer": "vite",
+    "dev:main": "wait-on -l http://localhost:5173 && electronmon src/main/main.js",
+    "build": "npm run clean && vite build",
+    "start": "npx electron .",
+    "dist": "npm run build && electron-builder",
+    "clean": "rm -rf build/* dist/* && mkdir -p build/main build/renderer",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "productName": "app-production-name-here",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/main/**/*",
+      "build/renderer/**/*",
+      "package.json"
+    ]
+  },
+  "type": "module",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.9",
+    "@types/node": "^22.13.5",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "electron": "^34.3.0",
+    "electron-builder": "^25.1.8",
+    "electronmon": "^2.0.3",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-react": "^7.37.4",
+    "prettier": "^3.5.2",
+    "rollup-plugin-copy": "^3.5.0",
+    "tailwindcss": "^4.0.9",
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0",
+    "vite-plugin-static-copy": "^2.2.0",
+    "wait-on": "^8.0.2"
+  }
+}

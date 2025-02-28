@@ -1,0 +1,90 @@
+# ===========================
+# 📦 Node.js dependencies
+# ===========================
+node_modules/
+pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ===========================
+# 🚀 Build & Output Directories
+# ===========================
+dist/
+build/
+release/
+out/
+dist-ssr/
+
+# ===========================
+# 📦 Electron Builder Cache & Output
+# ===========================
+*.exe
+*.app
+*.dmg
+*.snap
+*.deb
+*.rpm
+*.AppImage
+*.msi
+*.zip
+*.tar.gz
+*.blockmap
+
+# ===========================
+# 🔧 TypeScript & Vite Temporary Files
+# ===========================
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+.vite/
+.vitepress/
+
+# ===========================
+# 📜 Logs & Debugging Files
+# ===========================
+logs/
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ===========================
+# 🛠️ Debugging & OS-Specific Files
+# ===========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.history/
+*.swp
+*.swo
+*.sw?
+
+# ===========================
+# 📝 VSCode & Editor-Specific
+# ===========================
+.vscode/
+.idea/
+!.vscode/extensions.json # Keep recommended extensions file
+
+# ===========================
+# 🔑 Environment Files (Sensitive Data)
+# ===========================
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.local
+
+# ===========================
+# 🏗️ Project Metadata Files
+# ===========================
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
